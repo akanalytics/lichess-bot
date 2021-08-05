@@ -220,7 +220,7 @@ def play_game(li, game_id, control_queue, engine_factory, user_profile, config, 
 
 def choose_first_move(engine, board, ponder):
     # need to hardcode first movetime (10000 ms) since Lichess has 30 sec limit.
-    search_time = 10000
+    search_time = 5000
     logger.info("Searching for time {}".format(search_time))
     return engine.first_search(board, search_time, ponder)
 
