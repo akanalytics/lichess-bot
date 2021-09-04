@@ -1,0 +1,25 @@
+[Unit]
+Description=lichess-bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Environment="PYTHONUNBUFFERED=1"
+ExecStart=/usr/bin/python3 /home/thibault/lichess-bot-alt/lichess-bot.py
+WorkingDirectory=/home/thibault/lichess-bot/
+User=thibault
+Group=thibault
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+
+# sudo mv lichess-bot-alt.service /etc/systemd/system/lichess-bot-alt.service
+# sudo systemctl start lichess-bot-alt.service
+# sudo systemctl status lichess-bot-alt.service
+# sudo systemctl enable lichess-bot-alt.service
+
+# If your ExecStart line is all correct you should see the service running.
+
+# Use sudo journalctl -u lichess-bot-alt.service -f to tail the server logs.
