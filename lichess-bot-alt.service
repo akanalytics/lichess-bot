@@ -1,5 +1,5 @@
 [Unit]
-Description=lichess-bot
+Description=lichess-bot-alt
 After=network-online.target
 Wants=network-online.target
 
@@ -23,3 +23,4 @@ WantedBy=multi-user.target
 # If your ExecStart line is all correct you should see the service running.
 
 # Use sudo journalctl -u lichess-bot-alt.service -f to tail the server logs.
+
