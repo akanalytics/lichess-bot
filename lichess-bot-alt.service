@@ -5,10 +5,10 @@ Wants=network-online.target
 
 [Service]
 Environment="PYTHONUNBUFFERED=1"
-ExecStart=/usr/bin/python3 /home/thibault/lichess-bot-alt/lichess-bot.py
-WorkingDirectory=/home/thibault/lichess-bot/
-User=thibault
-Group=thibault
+ExecStart=/usr/bin/python3 /home/chesshome/code/lichess-bot-alt/lichess-bot.py -v
+WorkingDirectory=/home/chesshome/code/lichess-bot-alt/
+User=chess
+Group=chess
 Restart=always
 
 [Install]
